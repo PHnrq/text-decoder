@@ -20,16 +20,16 @@
     </header>
     <main>
         <form class="text-input-section">
-            <textarea placeholder="Digite seu Texto"></textarea>
+            <textarea placeholder="Digite seu Texto" autofocus id="userInput"></textarea>
             <div>
-                <button type="button">Criptografar</button>
-                <button type="button">Descriptografar</button>
+                <button type="button" onclick="onEncrypt()">Criptografar</button>
+                <button type="button" onclick="onDecrypt()">Descriptografar</button>
             </div>
         </form>
 
         <aside>
             <form>
-                <textarea>
+                <textarea id="showMessage">
                 </textarea>
                 <button type="button">Copiar</button>
             </form>
@@ -40,5 +40,7 @@
           &copy; Copyright - Paulo Figueredo
         </p>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
