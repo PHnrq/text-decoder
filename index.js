@@ -1,7 +1,9 @@
 function onEncrypt(){
   let emptyMessage = document.getElementById("emptyMessage");
+  let copyBtn = document.getElementById("copyBtn");
   emptyMessage.classList.remove("showEmptyMensage");
   emptyMessage.classList.add("hiddenEmptyMensage");
+  copyBtn.classList.remove("hiddenCopyBtn");
     
   let userInput = document.getElementById("userInput").value;
   let encrypted = userInput.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/o/g, 'ober').replace(/u/g, 'ufat').replace(/a/g, 'ai');
@@ -10,6 +12,10 @@ function onEncrypt(){
 }
 
 function onDecrypt(){
+    let emptyMessage = document.getElementById("emptyMessage");
+    emptyMessage.classList.remove("showEmptyMensage");
+    emptyMessage.classList.add("hiddenEmptyMensage");
+
     let userInput = document.getElementById("userInput").value;
     let decrypted = userInput.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ai/g, 'a').replace(/ufat/g, 'u');
     document.getElementById("showMessage").innerHTML = decrypted;
