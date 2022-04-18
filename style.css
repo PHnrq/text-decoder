@@ -71,12 +71,26 @@ header{
 .text-input-section div button:first-child{
     background: var(--dark-blue-300);
     color: var(--white);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.text-input-section div button:first-child:hover{
+    filter: brightness(1.2);
+    cursor: pointer;
 }
 
 .text-input-section div button:last-child, aside form button{
     background: transparent;
     color: var(--dark-blue-300);
     border: 2px solid var(--dark-blue-300);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.text-input-section div button:last-child:hover, aside form button:hover{
+    background:hsla(213, 84%, 24%, 0.1);;
+    cursor: pointer;
 }
 
 .hiddenEmptyMensage{
@@ -145,6 +159,10 @@ footer{
     background:hsla(227, 60%, 97%, 1);
     padding: 20px;
     font-size: 1.6rem;
+}
+
+footer a{
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 768px){
