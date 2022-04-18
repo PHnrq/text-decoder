@@ -1,7 +1,12 @@
 function onEncrypt(){
+  let emptyMessage = document.getElementById("emptyMessage");
+  emptyMessage.classList.remove("showEmptyMensage");
+  emptyMessage.classList.add("hiddenEmptyMensage");
+    
   let userInput = document.getElementById("userInput").value;
   let encrypted = userInput.replace(/e/g, 'enter').replace(/i/g, 'imes').replace(/o/g, 'ober').replace(/u/g, 'ufat').replace(/a/g, 'ai');
   document.getElementById("showMessage").innerHTML = encrypted;
+
 }
 
 function onDecrypt(){
