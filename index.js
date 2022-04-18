@@ -13,8 +13,10 @@ function onEncrypt(){
 
 function onDecrypt(){
     let emptyMessage = document.getElementById("emptyMessage");
+    let copyBtn = document.getElementById("copyBtn");
     emptyMessage.classList.remove("showEmptyMensage");
     emptyMessage.classList.add("hiddenEmptyMensage");
+    copyBtn.classList.remove("hiddenCopyBtn");
 
     let userInput = document.getElementById("userInput").value;
     let decrypted = userInput.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ai/g, 'a').replace(/ufat/g, 'u');
