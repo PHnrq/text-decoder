@@ -9,3 +9,13 @@ function onDecrypt(){
     let decrypted = userInput.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ober/g, 'o').replace(/ai/g, 'a').replace(/ufat/g, 'u');
     document.getElementById("showMessage").innerHTML = decrypted;
 }
+
+function handleCopy() {
+
+  let copyText = document.getElementById("showMessage");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+
+  navigator.clipboard.writeText(copyText.value);
+}
